@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.survey.ManageSurvey"
+    android:background="@color/off_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle1"
+                    android:src="@drawable/manage_survey"
+                    android:padding="20dp"
+                    android:id="@+id/dashboard_icon"/>
+
+                <com.app.survey.customs.OpenSansTextSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dashboard"
+                    android:textColor="@color/d_grey"
+                    android:layout_below="@+id/dashboard_icon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/survey_questions">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle1"
+                    android:src="@drawable/manage_survey"
+                    android:padding="20dp"
+                    android:id="@+id/survey_icon"/>
+
+                <com.app.survey.customs.OpenSansTextSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Survey Questions"
+                    android:textColor="@color/d_grey"
+                    android:layout_below="@+id/survey_icon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle2"
+                    android:src="@drawable/manage_survey"
+                    android:padding="20dp"
+                    android:id="@+id/export_icon"/>
+
+                <com.app.survey.customs.OpenSansTextSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Export"
+                    android:textColor="@color/d_grey"
+                    android:layout_below="@+id/export_icon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle3"
+                    android:src="@drawable/manage_survey"
+                    android:padding="20dp"
+                    android:id="@+id/help_icon"/>
+
+                <com.app.survey.customs.OpenSansTextSemiBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Help"
+                    android:textColor="@color/d_grey"
+                    android:layout_below="@+id/help_icon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

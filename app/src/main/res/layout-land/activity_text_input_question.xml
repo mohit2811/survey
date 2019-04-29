@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.survey.TextInputQuestion"
+    android:background="@color/off_white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:orientation="vertical">
+    <com.app.survey.customs.OpenSansTextRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question"
+        android:textColor="@color/d_grey"
+        android:textSize="18sp"/>
+
+
+    <com.app.survey.customs.OpenSansEditRegular
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke_rectangle"
+        android:hint=""
+        android:id="@+id/question_et"
+        android:padding="10dp"
+        android:inputType="textMultiLine"
+        android:imeOptions="actionDone"
+        android:textColor="@color/d_grey"
+        android:layout_marginTop="10dp"/>
+
+    <com.app.survey.customs.OpenSansTextRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type "
+        android:textColor="@color/d_grey"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke_rectangle3"
+        android:weightSum="2"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+
+            <com.app.survey.customs.OpenSansTextRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Single Line"
+                android:textSize="18sp"
+                android:background="@drawable/solid_rectangle_left"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:padding="10dp"
+                android:id="@+id/single_line"/>
+
+
+
+
+            <com.app.survey.customs.OpenSansTextRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Multi Line"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:id="@+id/multi_line"
+                android:textColor="@color/colorPrimary"/>
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <com.app.survey.customs.OpenSansTextRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maximum Characters "
+        android:textColor="@color/d_grey"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"/>
+
+        <com.app.survey.customs.OpenSansTextRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Optional"
+            android:textColor="@color/l_grey"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <com.app.survey.customs.OpenSansEditRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_rectangle"
+            android:padding="10dp"
+            android:id="@+id/num_characters_et"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/l_grey"
+            android:textColor="@color/d_grey"
+            android:inputType="number"
+            android:hint="number of characters"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <com.app.survey.customs.OpenSansButtonRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/solid_rectangle"
+            android:text="preview"
+            android:onClick="preview"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            />
+
+        <com.app.survey.customs.OpenSansButtonRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/solid_rectangle"
+            android:text="save"
+            android:onClick="save"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            />
+
+    </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

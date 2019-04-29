@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fc873f</color>
+
+    <color name="alpha_colorPrimary">#a6fc873f</color>
+    <color name="colorPrimaryDark">#f47d31</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="sea_blue">#2dbcb3</color>
+
+    <color name="pinkish">#ff8f98</color>
+    <color name="green">#7ac043</color>
+
+    <color name="dark_orange">#fdbf54</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="alpha_dark_orange">#acfdbf54</color>
+
+    <color name="l_orange">#faca78</color>
+    <color name="alpha_l_orange">#adfaca78</color>
+    <color name="d_grey">#5a6276</color>
+    <color name="off_white">#fffaed</color>
+    <color name="purple">#e0b2ea</color>
+
+    <color name="dark_pink">#fe4495</color>
+
+    <color name="dark_purple">#8095ff</color>
+
+    <color name="yellowish">#fdd38b</color>
+    <color name="alpha_yellowish">#adfdd38b</color>
+    <color name="l_yellowish">#ffdca1</color>
+    <color name="alpha_l_yellowish">#adffdca1</color>
+
+    <color name="transparent">#00ffffff</color>
+
+    <color name="l_grey">#ccc</color>
+</resources>
