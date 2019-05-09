@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:background="@color/off_white"
+    tools:context=".user.UserInfoActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.app.survey.customs.OpenSansTextRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NAME"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_rectangle"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/name_et"
+            />
+
+        <com.app.survey.customs.OpenSansTextRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONTACT"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_rectangle"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/contact_et"
+            />
+
+        <com.app.survey.customs.OpenSansTextRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EMAIL"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_rectangle"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/email_et"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.app.survey.customs.OpenSansTextRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DATE OF BIRTH"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_rectangle"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/dob_et"
+            />
+
+        <com.app.survey.customs.OpenSansTextRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MARRIAGE ANNIVERSERY(if married)"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_rectangle"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/anniversary_et"
+            />
+
+        <com.app.survey.customs.OpenSansTextRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GENDER"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_rectangle"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/gender_et"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/stroke_rectangle3"
+            android:text="NEXT"
+            android:onClick="next"
+            android:textColor="@color/colorPrimary"
+
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="3"
+                android:weightSum="2"
                 android:layout_marginTop="10dp">
 
                 <LinearLayout
@@ -67,7 +67,7 @@
                         android:text="Multiple Choice"/>
                 </LinearLayout>
 
-                <LinearLayout
+               <!-- <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -82,7 +82,7 @@
                         android:textColor="@color/white"
                         android:padding="20dp"
                         android:text="List"/>
-                </LinearLayout>
+                </LinearLayout>-->
 
         </LinearLayout>
 
@@ -124,7 +124,9 @@
                         android:gravity="center"
                         android:layout_margin="10dp"
                         android:background="@drawable/stroke_rectangle2"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:onClick="number_question">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -172,7 +174,8 @@
                             android:gravity="center"
                             android:layout_margin="10dp"
                             android:background="@drawable/stroke_rectangle2"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:onClick="sliding_bar_question">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -189,7 +192,8 @@
                             android:gravity="center"
                             android:layout_margin="10dp"
                             android:background="@drawable/stroke_rectangle2"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:onClick="star_rating_questions">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -206,7 +210,8 @@
                             android:gravity="center"
                             android:layout_margin="10dp"
                             android:background="@drawable/stroke_rectangle2"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:onClick="satisfaction_questions">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -240,7 +245,8 @@
             android:gravity="center"
             android:layout_margin="10dp"
             android:background="@drawable/stroke_rectangle2"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:onClick="display_text_question">
 
             <TextView
                 android:layout_width="wrap_content"

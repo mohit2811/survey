@@ -1,8 +1,6 @@
 package com.app.survey.datamodels;
 
-/**
- * Created by ghumman on 9/10/2017.
- */
+
 
 public class QuestionListData {
 

@@ -32,4 +32,13 @@ public class ManageSurvey extends AppCompatActivity implements View.OnClickListe
             overridePendingTransition(R.anim.right_in , R.anim.left_out);
         }
     }
+
+    public void open_dashboard(View view) {
+
+        Intent i = new Intent(ManageSurvey.this , SurveyDashboard.class);
+        startActivity(i);
+
+        overridePendingTransition(R.anim.right_in , R.anim.left_out);
+
+    }
 }

@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.app.survey.user.UserInfoActivity;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private RelativeLayout manage_survey_link , start_survey_link ;
@@ -16,13 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if(getResources().getBoolean(R.bool.portrait_only)){
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        }
-        else {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
-        }
 
         manage_survey_link = (RelativeLayout) findViewById(R.id.manage_survey_link);
         start_survey_link = (RelativeLayout) findViewById(R.id.start_survey_link);
@@ -48,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.start_survey_link:
-                Intent i2 = new Intent(MainActivity.this , StartSurvey.class);
+                Intent i2 = new Intent(MainActivity.this , UserInfoActivity.class);
                 startActivity(i2);
 
                 overridePendingTransition(R.anim.left_in , R.anim.right_out);

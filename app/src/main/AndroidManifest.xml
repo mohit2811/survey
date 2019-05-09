@@ -9,9 +9,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".SurveyDashboard"></activity>
+        <activity android:name=".user.UserShowQuestionsActivity" />
+        <activity
+            android:name=".user.UserInfoActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".DisplayTextQuestion"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SatisfactionQuestionACtivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".RatingBarQuestionActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SlidingQuestionActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".answers.NumberInputAnswer"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".NumberInputQuestion"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".MainActivity"
-            >
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,8 +68,9 @@
         <activity
             android:name=".TextInputQuestion"
             android:screenOrientation="landscape" />
-        <activity android:name=".answers.TextInputAnswer"
-            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".answers.TextInputAnswer"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

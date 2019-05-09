@@ -1,7 +1,9 @@
 package com.app.survey;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,9 +19,15 @@ import com.app.survey.answers.MultipleChoiceAnswer;
 import com.app.survey.customs.OpenSansTextBold;
 import com.app.survey.customs.OpenSansTextSemiBold;
 import com.app.survey.datamodels.NumbersData;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MultipleChoiceQuestion extends AppCompatActivity {
 
@@ -34,6 +42,8 @@ public class MultipleChoiceQuestion extends AppCompatActivity {
     private NumbersAdapter adapter;
 
     private EditText question ;
+
+    private ProgressDialog pd;
 
 
     @Override
@@ -59,6 +69,11 @@ public class MultipleChoiceQuestion extends AppCompatActivity {
         adapter = new NumbersAdapter(numbers);
 
         numbers_recycler.setAdapter(adapter);
+
+        pd = new ProgressDialog(MultipleChoiceQuestion.this);
+
+        pd.setTitle("Loading");
+        pd.setMessage("Please wait ..");
 
 
     }
@@ -89,7 +104,7 @@ public class MultipleChoiceQuestion extends AppCompatActivity {
             answer_et.setBackgroundDrawable(getResources().getDrawable(R.drawable.stroke_rectangle));
 
         }
-        answer_et.setHint("answer " + ++answer_count);
+        answer_et.setHint("answer " + answer_count++);
         answer_et.setId(answer_count + 100);
 
         answers_layout.addView(answer_et);
@@ -179,6 +194,61 @@ public class MultipleChoiceQuestion extends AppCompatActivity {
         return num_answers;
     }
 
+
+    private void save_question()
+    {
+
+        pd.show();
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+        DatabaseReference reference = database.getReference("survey_questions");
+
+        Map<String , Object> data = new HashMap<>();
+
+        data.put("question" , question.getText().toString());
+
+
+
+
+
+        data.put("option1" , ((EditText) findViewById(R.id.answer1_et)).getText().toString());
+        data.put("option2" , ((EditText) findViewById(R.id.answer2_et)).getText().toString());
+
+        for (int i = 2; i < answer_count; i++) {
+
+            data.put("option"+i , ((EditText) findViewById(i + 1 + 100)).getText().toString());
+        }
+
+        data.put("type" , "multiple_type");
+        data.put("answer_allowed" , answers_allowed());
+
+        reference.push().setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+
+                pd.hide();
+
+                if(task.isSuccessful())
+                {
+                    finish();
+
+                }
+            }
+        });
+
+
+
+    }
+
+
+    public void save(View view) {
+
+        if(validate_input())
+        {
+            save_question();
+        }
+    }
 }
 
 

@@ -36,6 +36,7 @@ public class QuestionTypes extends AppCompatActivity implements View.OnClickList
                 startActivity(i);
                 overridePendingTransition(R.anim.right_in , R.anim.left_out);
                 break;
+
             case R.id.multipe_choice:
                 i = new Intent(QuestionTypes.this , MultipleChoiceQuestion.class);
                 startActivity(i);
@@ -49,5 +50,30 @@ public class QuestionTypes extends AppCompatActivity implements View.OnClickList
                 break;
 
         }
+    }
+
+    public void number_question(View view) {
+
+        startActivity(new Intent(QuestionTypes.this , NumberInputQuestion.class));
+    }
+
+    public void sliding_bar_question(View view) {
+
+        startActivity(new Intent(QuestionTypes.this , SlidingQuestionActivity.class));
+    }
+
+    public void star_rating_questions(View view) {
+
+        startActivity(new Intent(QuestionTypes.this , RatingBarQuestionActivity.class));
+    }
+
+    public void satisfaction_questions(View view) {
+
+        startActivity(new Intent(QuestionTypes.this , SatisfactionQuestionACtivity.class));
+    }
+
+    public void display_text_question(View view) {
+
+        startActivity(new Intent(QuestionTypes.this , DisplayTextQuestion.class));
     }
 }
