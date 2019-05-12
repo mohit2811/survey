@@ -85,7 +85,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:onClick="open_analytics">
 
                 <ImageView
                     android:layout_width="100dp"
@@ -99,7 +100,7 @@
                 <com.app.survey.customs.OpenSansTextSemiBold
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Export"
+                    android:text="Analytics"
                     android:textColor="@color/d_grey"
                     android:layout_below="@+id/export_icon"
                     android:layout_centerHorizontal="true"
@@ -110,7 +111,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:onClick="open_help">
 
                 <ImageView
                     android:layout_width="100dp"

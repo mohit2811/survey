@@ -30,6 +30,7 @@
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:id="@+id/name_et"
+            android:hint="name"
             />
 
         <com.app.survey.customs.OpenSansTextRegular
@@ -46,6 +47,10 @@
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:id="@+id/contact_et"
+            android:hint="contact"
+            android:inputType="textPhonetic"
+            android:maxLines="1"
+            android:maxLength="10"
             />
 
         <com.app.survey.customs.OpenSansTextRegular
@@ -62,6 +67,8 @@
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:id="@+id/email_et"
+            android:inputType="textEmailAddress"
+            android:hint="email"
             />
 
     </LinearLayout>
@@ -86,6 +93,9 @@
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:id="@+id/dob_et"
+            android:hint="MM/dd/yy"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             />
 
         <com.app.survey.customs.OpenSansTextRegular
@@ -102,6 +112,7 @@
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:id="@+id/anniversary_et"
+            android:hint="anniversary date"
             />
 
         <com.app.survey.customs.OpenSansTextRegular
@@ -118,6 +129,7 @@
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:id="@+id/gender_et"
+            android:hint="gender"
             />
 
         <Button

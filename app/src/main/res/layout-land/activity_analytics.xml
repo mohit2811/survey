@@ -5,14 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SurveyDashboard">
+    tools:context=".AnalyticsActivity"
+    android:background="@color/off_white"
+    android:padding="100dp">
 
-    <android.support.v7.widget.RecyclerView
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/piechart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/all_users">
-
-
-    </android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent"/>
 
 </RelativeLayout>

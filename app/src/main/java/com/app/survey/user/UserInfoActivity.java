@@ -1,12 +1,15 @@
 package com.app.survey.user;
 
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.survey.R;
@@ -16,11 +19,33 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 public class UserInfoActivity extends AppCompatActivity {
 
     private EditText name_et , contact_et , email_et , dob_et , aniversary_et , gender_et ;
 
     private ProgressDialog pd ;
+
+    final Calendar myCalendar = Calendar.getInstance();
+
+
+
+    DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+
+        @Override
+        public void onDateSet(DatePicker view, int year, int monthOfYear,
+                              int dayOfMonth) {
+            // TODO Auto-generated method stub
+            myCalendar.set(Calendar.YEAR, year);
+            myCalendar.set(Calendar.MONTH, monthOfYear);
+            myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            updateLabel();
+        }
+
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +66,31 @@ public class UserInfoActivity extends AppCompatActivity {
         pd.setMessage("Please wait..");
 
 
+        dob_et.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                new DatePickerDialog(UserInfoActivity.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+
+            }
+        });
+
+
+
+
 
     }
+
+    private void updateLabel() {
+        String myFormat = "MM/dd/yy"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+        dob_et.setText(sdf.format(myCalendar.getTime()));
+    }
+
+
 
     public void next(View view) {
 
@@ -50,7 +98,7 @@ public class UserInfoActivity extends AppCompatActivity {
 
         String contact = contact_et.getText().toString();
 
-        String email = email_et.getText().toString();
+        final String email = email_et.getText().toString();
 
         String dob = dob_et.getText().toString();
 
@@ -70,7 +118,7 @@ public class UserInfoActivity extends AppCompatActivity {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
-        DatabaseReference reference = database.getReference("survey_user").push();
+        DatabaseReference reference = database.getReference("survey_user").child(email.replace(".",""));
 
 
         UserInfoDataModel dataModel = new UserInfoDataModel();
@@ -92,7 +140,14 @@ public class UserInfoActivity extends AppCompatActivity {
 
                     Toast.makeText(UserInfoActivity.this , "Information saved" , Toast.LENGTH_SHORT).show();
 
-                    startActivity(new Intent(UserInfoActivity.this , UserShowQuestionsActivity.class));
+                    Intent i = new Intent(UserInfoActivity.this , UserResponseActivity.class);
+
+                    i.putExtra("email" , email.replace("." , ""));
+
+                    startActivity(i);
+
+                    finish();
+
 
 
                 }

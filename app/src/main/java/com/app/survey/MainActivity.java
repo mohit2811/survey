@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId())
         {
             case R.id.manage_survey_link:
-                Intent i = new Intent(MainActivity.this , ManageSurvey.class);
+                Intent i = new Intent(MainActivity.this , AdminLogin.class);
                 startActivity(i);
 
                 overridePendingTransition(R.anim.right_in , R.anim.left_out);

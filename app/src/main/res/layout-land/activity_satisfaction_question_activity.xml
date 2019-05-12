@@ -24,6 +24,7 @@
         android:background="@drawable/stroke_rectangle"
         android:padding="10dp"
         android:layout_marginTop="10dp"
+        android:id="@+id/question_et"
         />
 
 
@@ -63,6 +64,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/stroke_rectangle3"
         android:text="SAVE"
+        android:onClick="save"
         android:textColor="@color/colorPrimary"
         android:layout_marginTop="20dp"/>
 

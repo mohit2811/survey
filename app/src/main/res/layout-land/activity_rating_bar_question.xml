@@ -24,6 +24,7 @@
         android:background="@drawable/stroke_rectangle"
         android:padding="10dp"
         android:layout_marginTop="10dp"
+        android:id="@+id/question_et"
         />
 
     <RatingBar
@@ -42,7 +43,7 @@
         android:background="@drawable/stroke_rectangle3"
         android:text="SAVE"
         android:textColor="@color/colorPrimary"
-
+        android:onClick="save"
         android:layout_marginTop="20dp"/>
 
 

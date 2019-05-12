@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.UserResponseActivity"
+    android:background="@color/off_white">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/off_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/text_input"
+        tools:context="com.app.survey.answers.TextInputAnswer">
+
+
+        <com.app.survey.customs.OpenSansTextRegular
+            android:id="@+id/question3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="question"
+            android:textColor="@color/d_grey"
+            android:textSize="20sp" />
+
+        <com.app.survey.customs.OpenSansEditRegular
+            android:id="@+id/answer3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:hint="type your answer"
+            android:minWidth="180dp"
+            android:inputType="number"
+            android:textColor="@color/d_grey"
+            android:textSize="18sp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_rectangle3"
+            android:text="NEXT"
+            android:onClick="next"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="20dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/off_white"
+        android:padding="20dp"
+        android:gravity="center"
+        android:id="@+id/rating_question"
+
+        >
+
+
+
+        <com.app.survey.customs.OpenSansTextRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/question4"
+            />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:numStars="5"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/rating_bar"
+
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_rectangle3"
+            android:text="NEXT"
+            android:onClick="next"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="20dp"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/off_white"
+        android:padding="20dp"
+        android:gravity="center"
+        android:id="@+id/sliding_question">
+
+
+
+        <com.app.survey.customs.OpenSansTextRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/question5"
+            android:layout_marginTop="10dp"
+            />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:progress="40"
+            android:id="@+id/seekbar_"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_rectangle3"
+            android:text="NEXT"
+            android:onClick="next"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="20dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/off_white"
+        android:padding="20dp"
+        android:gravity="center"
+        android:id="@+id/satisfaction_question">
+
+
+
+        <com.app.survey.customs.OpenSansTextRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/question6"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/satisfaction_group">
+
+
+            <RadioButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/sad"
+                android:id="@+id/sad_option"
+                />
+
+            <RadioButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/neutral"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/neutral_option"
+                />
+
+            <RadioButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/happy"
+                android:id="@+id/happy_option"
+                />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_rectangle3"
+            android:text="NEXT"
+            android:onClick="next"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="20dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp"
+        android:id="@+id/multi_question_"
+        android:background="@color/off_white"
+        android:visibility="gone"
+        >
+
+        <com.app.survey.customs.OpenSansTextRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="question1"
+            android:id="@+id/question1"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"/>
+
+        <org.apmem.tools.layouts.FlowLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/answers_layout"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            >
+        </org.apmem.tools.layouts.FlowLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_rectangle3"
+            android:text="NEXT"
+            android:onClick="next"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="20dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/off_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/two_choices_question_"
+        android:visibility="gone">
+
+
+        <com.app.survey.customs.OpenSansTextRegular
+            android:id="@+id/question2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="question"
+            android:textColor="@color/d_grey"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/stroke_rectangle3"
+            android:orientation="horizontal"
+
+            android:weightSum="2">
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/two_option_group">
+
+
+            <RadioButton
+                android:id="@+id/option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/solid_rectangle_left"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="    Yes    "
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                />
+
+
+            <RadioButton
+                android:id="@+id/option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="      No   "
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                />
+
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_rectangle3"
+            android:text="NEXT"
+            android:onClick="next"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

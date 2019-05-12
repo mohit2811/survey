@@ -76,4 +76,10 @@ public class QuestionTypes extends AppCompatActivity implements View.OnClickList
 
         startActivity(new Intent(QuestionTypes.this , DisplayTextQuestion.class));
     }
+
+    public void email_question(View view) {
+
+        startActivity(new Intent(QuestionTypes.this , EmailQuestionActivity.class));
+
+    }
 }

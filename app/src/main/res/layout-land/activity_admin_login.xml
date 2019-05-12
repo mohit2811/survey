@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminLogin"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/off_white"
+    android:padding="50dp">
+
+
+    <com.app.survey.customs.OpenSansEditRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke_rectangle"
+        android:minWidth="200dp"
+        android:hint="Email"
+        android:padding="5dp"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
+        android:id="@+id/email_et"
+        />
+
+    <com.app.survey.customs.OpenSansEditRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke_rectangle"
+        android:layout_marginTop="20dp"
+        android:minWidth="200dp"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:padding="5dp"
+        android:imeOptions="actionDone"
+        android:id="@+id/password_et"
+        />
+
+    <com.app.survey.customs.OpenSansButtonRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke_rectangle3"
+        android:text="LOGIN"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="30dp"
+        android:onClick="login"
+        />
+
+</LinearLayout>
